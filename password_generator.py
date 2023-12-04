@@ -6,7 +6,7 @@ def select_type() -> list:
     valid = False
     char = ''
     while not valid:
-        print('Select the type of password')
+        print('Select the type of password\n')
         print('1 - numbers')
         print('2 - special characters')
         print('3 - any characters')
