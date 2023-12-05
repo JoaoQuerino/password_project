@@ -1,8 +1,11 @@
-from hash_generator import create_has, create_has_sha1
+from hash_generator import create_has
 from password_generator import generate_password
 from common import get_user_input_generic
+from my_interface import form_check_password
 
 
+# TODO Criar formulario para todas as opções
+# TODO fazer formulario de login parar de abrir direto
 while True:
     print('*** Select a function to use ***')
     print('*** 1 - password generator ***')
@@ -39,19 +42,9 @@ while True:
 
     elif selected_function == 4:
         try:
-            check_password = get_user_input_generic('Inform the password to create a hash: ', 'Invalid error', str)
-            has_by_password = create_has_sha1(check_password)
-            print(has_by_password)
-            string_to_compare = get_user_input_generic('Inform the string to compare with the hash', 'Input error', str)
-            string_to_compare = create_has_sha1(string_to_compare)
-            if string_to_compare == has_by_password:
-                print('The password is right')
-            else:
-                print('The second password is different')
-
+            form_check_password()
         except Exception as e:
             print(e)
-
     else:
         print('Invalid function')
 
