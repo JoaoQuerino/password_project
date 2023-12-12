@@ -1,12 +1,12 @@
 from hash_generator import create_has
 from password_generator import generate_password
 from common import get_user_input_generic
-from my_interface import form_check_password
+from my_interface import form_check_password, form_main
 
 
-# TODO Criar formulario para todas as opções
-# TODO fazer formulario de login parar de abrir direto
+# TODO Finalizar formulario do password generator
 while True:
+    form_main(1, 2, 3, 4)
     print('*** Select a function to use ***')
     print('*** 1 - password generator ***')
     print('*** 2 - Hash generator ***')

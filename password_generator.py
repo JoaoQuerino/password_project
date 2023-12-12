@@ -2,16 +2,15 @@ import random
 import string
 
 
-def select_type() -> list:
+def select_type(num_type) -> list:
     valid = False
     char = ''
+    type_selected = num_type
     while not valid:
-        print('Select the type of password\n')
-        print('1 - numbers')
-        print('2 - special characters')
-        print('3 - any characters')
-        print('4 - letters')
-        type_selected = input('Inform the type: ')
+        # 1 - numbers
+        # 2 - special characters
+        # 3 - any characters
+        # 4 - letters
 
         if type_selected in ['1', '2', '3', '4']:
             if type_selected == '1':
